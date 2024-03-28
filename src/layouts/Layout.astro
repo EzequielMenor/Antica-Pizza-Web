@@ -1,5 +1,5 @@
 ---
-import Header from '../components/Header.astro';
+import Header from "../components/Header.astro";
 
 interface Props {
 	title: string;
@@ -14,21 +14,26 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body class="min-h-screen pb-32">
-    <Header />
-    <main class="max-w-5xl px-4 m-auto">
-      <slot />
-    </main>
-  </body>
+		<Header />
+		<main class="max-w-5xl px-4 m-auto">
+			<slot />
+		</main>
+	</body>
 </html>
 <style is:global>
 	html {
-		font-family:  'Lato', sans-serif;
+		font-family: "Lato", sans-serif;
 		background-color: #ffff;
 		background-size: 224px;
+		background: url(/bg-page.jpeg) repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 	}
 </style>
